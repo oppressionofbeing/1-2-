@@ -1,0 +1,239 @@
+/* Шапка */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #1f2430;
+  color: #fff;
+}
+
+.site-header__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.site-header__logo {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-header__nav a {
+  color: #d7dae2;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header__nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Основное содержимое */
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main section {
+  scroll-margin-top: 72px;
+}
+
+.hero {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e1d8;
+  border-radius: 16px;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #4b5563;
+  max-width: 640px;
+}
+
+.status-message {
+  padding: 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.status-message--error {
+  color: #b42318;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+/* Карточки */
+.card {
+  background: #fff;
+  border: 1px solid #e5e1d8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card__value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__label {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+/* Прогресс */
+.progress {
+  height: 8px;
+  background: #ece8de;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  background: #3b7a57;
+  border-radius: 999px;
+}
+
+/* Напоминания */
+.alert-list {
+  margin: 0;
+  padding: 12px 16px 12px 32px;
+  background: #fff4e5;
+  border: 1px solid #f5c98a;
+  border-radius: 12px;
+}
+
+/* Фильтры */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  border: 1px solid #d6d1c4;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.chip--active {
+  background: #1f2430;
+  border-color: #1f2430;
+  color: #fff;
+}
+
+/* Список книг */
+.book-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #e5e1d8;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.book__side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--reading {
+  background: #dff1e6;
+  color: #25603f;
+}
+
+.badge--planned {
+  background: #e4ebf8;
+  color: #2c4a86;
+}
+
+.badge--paused {
+  background: #fdecc8;
+  color: #8a5a00;
+}
+
+.badge--finished {
+  background: #e9e5f5;
+  color: #4b3b8a;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .card__value {
+    font-size: 1.6rem;
+  }
+}
